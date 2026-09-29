@@ -16,7 +16,7 @@ You can complete this task on the worksheet pdf if you prefer.
 |     cd ..                   | move up one directory level |
 |     cd -                    | moving to the previous directory|
 |     mkdir directory_name    | make a directory of the name given|
-|     touch filename          | makes a new emmpty file|
+|     touch filename          | makes a new empty file|
 |     git status              | tells you what file has been created, saved or modified before its saved|
 |     git add -A              | to add all the works thats needs to be saved|
 |     git commit -m ""        | bundles into one commit and lets you commit the message|
