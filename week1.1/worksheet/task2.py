@@ -8,12 +8,13 @@ name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
 
 num=input("enter amount:")
-numint=float(num)
-if numint.is_integer():
-  total=numint*12
-  amountsaved=total*1.008
-  print(f"Amount saved in a year: {round(amountsaved,2)}")
-else:
+try:
+  monthlyamount=int(num)
+  totalamount=monthlyamount*12
+  amountsaved=totalamount*1.008
+  print(f"Total amount saved in a year:£{totalamount}")
+  print(f"Total amount saved:£{amountsaved:.2f}")
+except ValueError:
   print("Invalid amount")
         
 
