@@ -3,22 +3,22 @@ import sys
 from util import read_numbers
 
 try:
-    listofnumbers=read_numbers()
-    if not listofnumbers:
+    numbers=read_numbers()
+    
+    if not numbers:
         raise ValueError
+    
+    print(f"Maximum={max(numbers)}")
+    print(f"Minimum={min(numbers)}")
+    print(f"Mean= {sum(numbers)/len(numbers)}")
+    numbers.sort()
+    n=len(numbers)
 
-    minval=min(listofnumbers)
-    maxval=max(listofnumbers)
-    mean=(sum(listofnumbers)/len(listofnumbers))
-    sortedlist=sorted(listofnumbers)
-    n=len(listofnumbers)
-    if n%2==0:
-        median=float((sortedlist[(n//2)-1]+sortedlist[n//2])/2)
+    if n%2==1:
+        median=numbers[n//2]
     else:
-        median=float(sortedlist[n//2])
-    print("Minimum:",{minval:.1f})
-    print("Maximum:",{maxval:.1f})
-    print("Mean:",{mean:.1f})
-    print("Median:",{median:1.f})
+        median=(numbers[(n//2)-1]+numbers[n//2])/2
+    print(f"Median={median}")
+    
 except(ValueError,ZeroDivisionError,EOFError,KeyboardInterrupt):
     sys.exit("Error: no numbers provided")
