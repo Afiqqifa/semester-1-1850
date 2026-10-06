@@ -2,9 +2,8 @@
 import sys
 from util import read_numbers
 
-listofnumbers=read_numbers()
-
 try:
+    listofnumbers=read_numbers()
     if not listofnumbers:
         raise ValueError
 
