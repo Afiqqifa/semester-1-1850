@@ -18,6 +18,7 @@ try:
         median=numbers[n//2]
     else:
         median=(numbers[(n//2)-1]+numbers[n//2])/2
+        if isinstance(median,float) and median.is_integer():
     print(f"Median={median}")
     
 except(ValueError,ZeroDivisionError,EOFError,KeyboardInterrupt):
