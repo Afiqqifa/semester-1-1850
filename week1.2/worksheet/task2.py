@@ -10,7 +10,7 @@ try:
     
     print(f"Maximum={max(numbers)}")
     print(f"Minimum={min(numbers)}")
-    print(f"Mean= {sum(numbers)/len(numbers)}")
+    print(f"Mean={sum(numbers)/len(numbers)}")
     numbers.sort()
     n=len(numbers)
 
@@ -19,6 +19,8 @@ try:
     else:
         median=(numbers[(n//2)-1]+numbers[n//2])/2
         if isinstance(median,float) and median.is_integer():
+            median=int(median)    
+    
     print(f"Median={median}")
     
 except(ValueError,ZeroDivisionError,EOFError,KeyboardInterrupt):
