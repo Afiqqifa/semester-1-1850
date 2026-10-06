@@ -5,6 +5,9 @@ from util import read_numbers
 listofnumbers=read_numbers()
 
 try:
+    if not listofnumbers:
+        raise ValueError
+
     minval=min(listofnumbers)
     maxval=max(listofnumbers)
     mean=(sum(listofnumbers)/len(listofnumbers))
@@ -18,5 +21,5 @@ try:
     print("Maximum:",maxval)
     print("Mean:",mean)
     print("Median:",median)
-except:
+except(ValueError,ZeroDivisionError,EOFError,KeyboardInterrupt):
     sys.exit("Error: no numbers provided")
