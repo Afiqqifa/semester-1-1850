@@ -17,9 +17,9 @@ try:
         median=(sortedlist[(n//2)-1]+sortedlist[n//2])/2
     else:
         median=sortedlist[n//2]
-    print("Minimum:",minval)
-    print("Maximum:",maxval)
-    print("Mean:",mean)
-    print("Median:",median)
+    print("Minimum:",{minval:.1f})
+    print("Maximum:",{maxval:.1f})
+    print("Mean:",{mean:.1f})
+    print("Median:",{median:1.f})
 except(ValueError,ZeroDivisionError,EOFError,KeyboardInterrupt):
     sys.exit("Error: no numbers provided")
