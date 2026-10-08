@@ -1,0 +1,2 @@
+Temp:500,PSI:500,Opstatus:1,action:it is recommended to turn off and undergo maintenance
+Temp:60,PSI:60,Opstatus:1,action:no action needed machine is operating normally
