@@ -19,7 +19,7 @@ try:
     else:
         median = (numbers[(n//2)-1]+numbers[n//2])/2
         if isinstance(median,float) and median.is_integer():
-            median = int(median)    
+            median = median    
     
     print(f"Median = {median}")
     
