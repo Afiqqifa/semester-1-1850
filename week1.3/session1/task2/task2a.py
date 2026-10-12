@@ -1,12 +1,9 @@
 # Week 1.3, Session 1: Task 2a
 
 k = 2
-while True:
-    if k>200:
-        break
-    else:
-        k = 2 * k 
-        print(k)
+while k<200:
+    k = 2 * k 
+    print(k)
 
     
 
