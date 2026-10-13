@@ -4,9 +4,38 @@
 
 # ask for filename of the student file
 filename=input("Enter filename to access:")
+filenameout=filename.replace(".csv","")+"_out.csv"
 
-with open(filename) as file:
-    
+with open(filename) as file, open(filenameout,"w") as outfile:
+    next(file)
+
+    for line in file:
+        line=line.strip()
+        if not line:
+            continue
+        studentarray=line.split(",")
+        student_id=studentarray[0]
+        studentarray=studentarray[1:]
+        gradeslist=[float(i) for i in studentarray if i.strip()!=""]
+        
+        if not gradeslist:
+            continue
+        mean=(sum(gradeslist)/len(gradeslist))
+
+        if mean>=70:
+            grade="1"
+        elif mean>=60:
+            grade="2:1"
+        elif mean>=50:
+            grade="2:2"
+        elif mean>=40:
+            grade="3"
+        else:
+            grade="F"
+        string=f"{student_id},{mean:.2f},{grade}"
+        outfile.write(string+"\n")
+        
+
 
 # open the file
 
