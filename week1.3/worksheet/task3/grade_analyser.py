@@ -3,6 +3,10 @@
 # Your code for the overall grade classification
 
 # ask for filename of the student file
+filename=input("Enter filename to access:")
+
+with open(filename) as file:
+    
 
 # open the file
 
