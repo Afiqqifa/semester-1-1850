@@ -10,16 +10,21 @@ systime = 0
 maxtime = int(input("numberofsteps: "))  # read an integer number of steps (>0)
 
 state = "red"
-duration=states.get(state)
-statetime=systime+duration
-
+statekeys = list(states.keys())
+y = 0
 x=0
 
 for i in range(maxtime+1):
     print(f"Time {systime:03} State {state}")
-    systime=i+1
-    if systime==statetime:
-        while x<=4:
+    x += 1
+    if x==states[state]:
+        x = 0
+        y += 1
+        if y >= len(statekeys):
+            y = 0
+        state = statekeys[y]
+    systime += 1            
+        
             
     
 
