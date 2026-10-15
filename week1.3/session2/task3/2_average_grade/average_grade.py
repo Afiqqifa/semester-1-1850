@@ -2,6 +2,19 @@
 
 # Open 'student_data.csv' to read each student's grades
 # hint: skip the header row with data[1:]
+with open("student_data.csv","r") as file1, open("report.txt","w") as file2:
+    lines=file1.readlines()
+
+    for line in lines[1:]:
+        string=line.strip().split(",")
+        idstudent=string[0]
+        name=string[1]
+        math=int(string[2])
+        science=int(string[3])
+        history=int(string[4])
+        average=(math+science+history)/3
+        linewritten=f"{idstudent},{name},{average:.2f}\n"
+        file2.write(linewritten)
 
 
 # Read each student's grades and calculate their average grade
