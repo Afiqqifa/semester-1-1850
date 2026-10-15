@@ -2,6 +2,17 @@
 
 # Open a pgm image
 # You could handle file errors with try/except
+try:
+    with open("/workspaces/semester-1-1850/week1.3/session2/task4/images/feep.pgm","r") as file:
+        lines=file.readlines()
+        header=lines[0].strip()
+        dimensions=lines[1].strip()
+        maxgrayvalue=lines[2].strip()
+        dimparts=dimensions.split()
+        width=int(dimparts[0])
+        height=int(dimparts[1])
+        for line in lines[3:]:
+
 
 # Read the file content
 
