@@ -9,6 +9,10 @@
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
 
+with open("story.txt","r") as file:
+    words=file.read().split()
+print(len(words))
+
 # display the wordcount
 
 # Here are the word counts you should get:

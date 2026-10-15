@@ -21,3 +21,5 @@
     Hints: 
     - Use `w` mode to create a fresh report each time
     - Format averages nicely, maybe to 2 decimal places with `:.2f`.
+
+with open("student_data.csv","r") as file1, open 

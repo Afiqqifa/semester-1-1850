@@ -3,6 +3,21 @@
 # We want to find all failed login attempts based on Request and Status code 
 # (i.e., POST /login with the response 401) in a log file and print these out in a
 # human-readable format.
+with open("site.txt","r") as file:
+    header=file.readline()
+    for line in file:
+        parts=line.strip().split(",")
+        if len(parts)>=6:
+            date=parts[0]
+            time=parts[1]
+            ip=parts[2]
+            useragent=parts[3]
+            request=parts[4]
+            code=parts[5]
+            if code=="401" and request=="POST /login":
+                print(f"IP address {ip} failed to login at {time} on {date}")
+
+
 
 
 # open and read the file
