@@ -12,11 +12,19 @@ def isBond(intList):
     in the specified order.
     """
 
+    bond=[0,0,7]
+    for i in intList:
+        if i==bond[0]:
+            bond.pop(0)
+            if not bond:
+                return True
+    return False
+
     # pass is a Python keyword used as a placeholder for future code,
     # meaning you need to delete pass to write your code.
     # Nothing happens when pass is executed.
 
-    pass     # delete pass to write your code
+         # delete pass to write your code
 
 # Check if the following lines of code produce the correct output
 print(isBond([1, 2, 4, 0, 0, 7, 5]))   # True
