@@ -19,7 +19,7 @@ def currency_converter(amount, from_currency, to_currency):
     }
 
     if amount<0:
-        return 0.0
+        print("0.0")
     else:
         rate=conversion_rate.get(from_currency).get(to_currency)
         newamount=amount*rate
