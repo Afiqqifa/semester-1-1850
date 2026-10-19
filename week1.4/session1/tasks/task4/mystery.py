@@ -11,6 +11,12 @@
 # function implementation
 
 def mystery_func(string):
+    """This function takes a mix of alphabetical strings and filters out whether the letters are in uppercase or lowercase
+    it sorts out through the for loop with if statements and returns the value of how many uppercase or lowercase letters"""
+
+
+
+
     upper = 0
     lower = 0
 
@@ -34,5 +40,5 @@ print(mystery_func("ABC"))
 # Uncomment the lines of code one by one and run the program
 # to see if you are right?
 
-# print(mystery_func("X"))
-# print(mystery_func("[2, 3]"))
+print(mystery_func("X"))
+print(mystery_func("[2, 3]"))

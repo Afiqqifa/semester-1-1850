@@ -5,10 +5,10 @@
 
 # Your task is to update the docstring to reflect what the function does.
 
-
+numbers=[-1,1,2,3]
 def filter_positive_numbers(numbers):
     """
-    Filters out positive numbers from the list, keeping only the negative ones.
+    Filters out negative numbers from the list, keeping only the positive ones.
     The function returns a list of all the positive numbers in the input.
 
     Args:
@@ -17,4 +17,7 @@ def filter_positive_numbers(numbers):
     Returns:
         list of int: A list containing only the positive integers.
     """
+
+
     return [num for num in numbers if num > 0]
+print(filter_positive_numbers(numbers))

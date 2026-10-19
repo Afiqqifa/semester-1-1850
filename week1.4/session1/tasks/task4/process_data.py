@@ -19,9 +19,13 @@ def process_data(data):
     Returns:
         int: The sum of all integers in the list or None if empty.
     """
+    sum=0
     if not data:
         return 0
-    return sum(data)
+    else:
+        for i in range(len(data)):
+            sum=sum+data[i]
+    return sum
 
 # What is output from the following line of code?
 print(process_data([1, 2, 3, 4, 5]))  # 15?
