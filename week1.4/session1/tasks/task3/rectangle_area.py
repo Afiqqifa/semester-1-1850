@@ -2,8 +2,12 @@
 # function implementation
 
 def rectangle_area( ):  # define suitable input data
-    # ...               # implement the function
-    return              # return an appropriate value
+    # ...
+    width=int(input("Enter width:"))
+    height=int(input("Enter height:"))
+    recarea=width*height
+                   # implement the function
+    return recarea              # return an appropriate value
 
 # testing the function
 
