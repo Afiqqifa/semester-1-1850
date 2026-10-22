@@ -16,6 +16,8 @@ def divide_and_remainder(dividend, divisor):
     Returns:
         tuple: A tuple containing (quotient, remainder).
     """
+    quotient = dividend // divisor  # Integer division to get the quotient
+    remainder = dividend % divisor  # Modulus operation to get the remainder
 
     # complete your code here
 
