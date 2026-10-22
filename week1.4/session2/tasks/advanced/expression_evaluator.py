@@ -23,3 +23,12 @@ def evaluate_expression(expression, x=0, y=0, **kwargs):
     To get started with this task, you can have a look at Python built-in
     function eval that will return the results of an evaluated expression.
     """
+    # Create a dictionary of variables with default values for x and y
+    variables = {'x': x, 'y': y}
+    # Update the dictionary with any additional keyword arguments
+    variables.update(kwargs)
+    # Evaluate the expression using the eval function with the provided variables
+    return eval(expression, {}, variables)
+
+print(evaluate_expression('x + y + z', x=1, y=2, z=3))  # Output: 6
+print(evaluate_expression('a * b + c', a=5, b=3, c=10))  # Output: 25
