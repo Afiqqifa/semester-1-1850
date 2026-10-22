@@ -10,7 +10,7 @@ import calendar
 # For example, the following code prints the calendar month for October 2025.
 # Run the program and observe the output.
 
-print(calendar.month(2025, 10))
+
 
 # Your task is to go to https://docs.python.org/3/library/calendar.html,
 # and have a look at other optional arguments for the month function,
@@ -28,3 +28,10 @@ print(calendar.month(2025, 10))
 # Your task is to write code to make 3 functions calls to the calendar
 # function with different values to the optional arguments (w, l, c, and m).
 # Display the output to observe the differences.
+
+
+print(calendar.month(2025, 10))
+
+print(calendar.month(2025, 10, w=3, l=2))
+
+print(calendar.calendar(2025, w=2, l=1, c=6, m=3))
