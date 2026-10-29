@@ -71,5 +71,11 @@ class Circle:
         Returns a string representation of this Circle.
         """
         return f"radius={self.radius}, centre={self.centre}"
+    
+    def __contains__(self, p):
+        """
+        Returns True if the specified Point is inside this Circle, False otherwise.
+        """
+        return self.centre.distance_to(p) < self.radius
 
     # Implement your __contains__() method here
