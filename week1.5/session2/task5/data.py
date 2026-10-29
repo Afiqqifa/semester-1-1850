@@ -14,6 +14,7 @@ class Dataset:
         self.data = []
         if filename:
             self.load_data(filename)
+            
 
     def load_data(self, filename):
         """
@@ -21,23 +22,45 @@ class Dataset:
 
         Any existing data will be deleted.
         """
+        self.data = []
+        with open(filename, 'r') as f:
+            for line in f:
+                try:
+                    value = float(line.strip())
+                    self.data.append(value)
+                except ValueError:
+                    # Ignore lines that cannot be converted to float
+                    pass
 
     def __len__(self):
         """
         Returns the size of this Dataset.
         """
+        return len(self.data)
 
     def __getitem__(self, index):
         """
         Returns the value at the specified position in this Dataset.
         """
+        return self.data[index]
 
     def mean(self):
         """
         Returns the arithmetic mean of the values in this Dataset.
         """
+        if not self.data:
+            return 0
+        return sum(self.data) / len(self.data)
 
     def median(self):
         """
         Returns the median of the values in this Dataset.
         """
+        if not self.data:
+            return 0
+        sorted_data = sorted(self.data)
+        n = len(sorted_data)
+        if n % 2 == 0:
+            return (sorted_data[n // 2 - 1] + sorted_data[n // 2]) / 2
+        else:
+            return sorted_data[n // 2]
