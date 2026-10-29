@@ -7,6 +7,10 @@ class Person:
     A Person, with a name and a date of birth.
     """
     def __init__(self, name, birth):
+        if name=="":
+            raise ValueError("A name is needed")
+        if not isinstance(name,str):
+            raise TypeError("Must be a string")
        
         self.name = name
         self.birth = birth
@@ -33,3 +37,9 @@ person2=Person("John Doe", date(1990, 10, 26))
 print(person2.initials())
 if person2.is_birthday():
     print("Happy Birthday!")
+
+person3=Person(1, date(1990, 10, 26))
+print(person2.initials())
+if person2.is_birthday():
+    print("Happy Birthday!")
+
