@@ -38,8 +38,5 @@ print(person2.initials())
 if person2.is_birthday():
     print("Happy Birthday!")
 
-person3=Person(1, date(1990, 10, 26))
-print(person2.initials())
-if person2.is_birthday():
-    print("Happy Birthday!")
+
 
