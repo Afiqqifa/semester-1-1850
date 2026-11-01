@@ -7,6 +7,9 @@ class Person:
     A Person, with a name and a date of birth.
     """
     def __init__(self, name, birth):
+        """
+        Creates a Person, given values for name and birth.
+        """
         if name=="":
             raise ValueError("A name is needed")
         if not isinstance(name,str):
