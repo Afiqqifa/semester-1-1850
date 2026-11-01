@@ -11,7 +11,6 @@ class Person:
             raise ValueError("A name is needed")
         if not isinstance(name,str):
             raise TypeError("Must be a string")
-       
         if not isinstance(birth,date):
             raise TypeError("Must be a date object")
 
