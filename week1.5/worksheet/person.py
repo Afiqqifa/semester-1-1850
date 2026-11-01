@@ -12,7 +12,7 @@ class Person:
         if not isinstance(name,str):
             raise TypeError("Must be a string")
        
-       if not isinstance(birth,date):
+        if not isinstance(birth,date):
             raise TypeError("Must be a date object")
 
         self.name = name
