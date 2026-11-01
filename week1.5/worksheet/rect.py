@@ -22,7 +22,8 @@ class Rectangle:
     def is_square(self):
         """
         Returns True if the rectangle is a square, False otherwise.
-        """
+        """ 
+        
         return self.width == self.height
     
     def area(self):

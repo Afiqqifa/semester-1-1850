@@ -12,14 +12,21 @@ class Person:
         if not isinstance(name,str):
             raise TypeError("Must be a string")
        
+       if not isinstance(birth,date):
+            raise TypeError("Must be a date object")
+
         self.name = name
         self.birth = birth
     
     def initials(self):
+        """Returns the initials of the person in uppercase.
+        """
         initialsperson="".join([part[0].upper() for part in self.name.split()])
         return initialsperson
     
     def is_birthday(self):
+        """Returns True if today is the person's birthday, False otherwise.
+        """
         today = date.today()
         return (self.birth.month, self.birth.day) == (today.month, today.day)
 
