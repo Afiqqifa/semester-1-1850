@@ -39,7 +39,7 @@ Next, try creating a feed using an invalid level or period:
     QuakeFeed("4.5", "fortnight")
 
 Both of these attempts should fail with a `TypeError` exception.
-
+    
 Now create a valid feed and look at how it is represented as a string:
 
     feed = QuakeFeed("4.5", "week")
