@@ -29,12 +29,12 @@ def test_circle():
 def test_area():
     c1 = Circle(2)
 
-    assert c1.area()==12.56
+    assert round(c1.area(),2)==12.57
 
 def test_perimeter():
     c1=Circle(2)
 
-    assert c1.perimeter()==12.56
+    assert round(c1.perimeter(),2)==12.57
     
 
 # Write test functions to test the __init__(), 
