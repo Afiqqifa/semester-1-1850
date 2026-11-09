@@ -14,9 +14,27 @@ def test_point_distance():
 def test_point_distance_to():
     p1 = Point(0, 0)
     p2 = Point(3, 4)
+
+    assert p1.distance_to(p2)==5
     
     # complete the implementation for
     # testing distance_to()
+def test_circle():
+    c1=Circle(2)
+    
+    assert c1.radius==2
+    assert c1.centre.x==0
+    assert c1.centre.y==0
+
+def test_area():
+    c1 = Circle(2)
+
+    assert c1.area()==12.56
+
+def test_perimeter():
+    c1=Circle(2)
+
+    assert c1.perimeter()==12.56
     
 
 # Write test functions to test the __init__(), 
