@@ -34,8 +34,8 @@ def test_invalid_type_pence():
 def test_invalid_value_pence():
     # complete the test implementation for 
     # invalid value for pence
-    m2=Money(0,10000)
     with pytest.raises(ValueError) as excinfo:
+        m2=Money(0, 10000)
     assert str(excinfo.value)=="pence must be in range 0-99"
     
 
