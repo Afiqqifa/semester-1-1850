@@ -3,11 +3,16 @@ import matplotlib.pyplot as plt  # import library
 
 x = [ k for k in range(10) ]  # create a range for the data
 y = [ k*k for k in x ]      # create a simple function y=x^2
+y2=[k*k*k for k in x]
 
-plt.plot(x,y)  # create a 2d plot
+plt.plot(x,y, marker="o")  # create a 2d plot
+plt.plot(x,y2)
+
 
 plt.xlabel('x')
 plt.ylabel('y=x^2')  # annotate
+
+
 
 plt.show()  # display
 
